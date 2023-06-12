@@ -3,6 +3,7 @@ import ContactForm from './ContactForm';
 import Filter from './Filter/Filter';
 import ContactList from './ContactList';
 import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
 
 export class App extends Component {
   state = {
@@ -13,6 +14,11 @@ export class App extends Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
+  };
+
+  static propTypes = {
+    contacts: PropTypes.array,
+    filter: PropTypes.number,
   };
 
   addContactFormSubmit = data => {

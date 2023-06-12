@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import C from './ContactForm.module.css';
 
@@ -10,6 +10,11 @@ class ContactForm extends Component {
   state = {
     name: '',
     number: '',
+  };
+
+  static propTypes = {
+    name: PropTypes.string,
+    number: PropTypes.number,
   };
 
   handleInputChange = evt => {
